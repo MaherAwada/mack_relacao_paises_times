@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo3 Web App</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .status-dot {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .status-dot-logged {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+<div id="status" class="status-dot"></div>
+<h1>Projeto N2</h1>
+<div id="token-container">
+    <h2>Token</h2>
+    <label for="token">Token:</label>
+    <input type="text" id="token"/>
+</div>
+<div id="register-container">
+    <h2>Registro</h2>
+    <label for="register-email">Email:</label>
+    <input type="text" id="register-email" placeholder="email">
+    <label for="register-password">Senha:</label>
+    <input type="password" id="register-password" placeholder="password">
+    <button onclick="register()">Registrar</button>
+    <div id="register-result"></div>
+</div>
+<div id="auth-container">
+    <h2>Autenticação</h2>
+    <label for="email">Email:</label>
+    <input type="text" id="email">
+    <label for="password">Senha:</label>
+    <input type="password" id="password">
+    <button onclick="authenticate()">Entrar</button>
+    <div id="login-result"></div>
+</div>
+<div id="country-container">
+    <h2>Países</h2>
+    <div id="input-country-container">
+        <label for="pais-nome">Nome:</label>
+        <input type="text" id="pais-nome" placeholder="nome do país">
+        <label for="pais-continente">Continente:</label>
+        <input type="text" id="pais-continente" placeholder="continente do país">
+        <label for="pais-populacao">População:</label>
+        <input type="number" id="pais-populacao" placeholder="população do país">
+        <button onclick="countryRegister()">Registrar País</button>
+    </div>
+    <hr/>
+    <button onclick="listCountries()">Listar Países</button>
+    <ul id="country-list"></ul>
+</div>
+<div id="team-container">
+    <h2>Times</h2>
+    <div id="input-team-container">
+        <label for="team-nome">Nome:</label>
+        <input type="text" id="team-nome" placeholder="nome do time">
+        <label for="team-anoFundacao">Ano fundação:</label>
+        <input type="number" id="team-anoFundacao" placeholder="ano fundação do time">
+        <label for="team-cidade">Cidade:</label>
+        <input type="text" id="team-cidade" placeholder="cidade do time">
+        <label for="team-estado">Estado:</label>
+        <input type="text" id="team-estado" placeholder="estado do time">
+        <button onclick="teamRegister()">Registrar Time</button>
+    </div>
+    <button onclick="listTeams()">Listar Times</button>
+    <ul id="team-list"></ul>
+</div>
+<div id="faq-container">
+    <h2>FAQ</h2>
+    <div id="input-faq-container">
+        <label for="faq-pergunta">Pergunta:</label>
+        <input type="text" id="faq-pergunta" placeholder="pergunta">
+        <label for="faq-resposta">Resposta:</label>
+        <input type="text" id="faq-resposta" placeholder="resposta">
+        <button onclick="faqRegister()">Registrar FAQ</button>
+        <label for="faq-pergunta-search">Pergunta:</label>
+        <input type="text" id="faq-pergunta-search" placeholder="pergunta busca">
+        <button onclick="faqSearch()">Buscar pergunta</button>
+    </div>
+    <button onclick="listFaq()">Listar FAQ</button>
+    <ul id="faq-list"></ul>
+</div>
+
+</body>
+<script src="script.js"></script>
+</html>
